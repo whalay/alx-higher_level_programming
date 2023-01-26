@@ -5,7 +5,7 @@
 
 
 class Square:
-    """ Class Square """
+    """ A square class with a private instance size attribute """
 
     def __init__(self, size=0):
         """ Initializes self """
@@ -18,4 +18,3 @@ class Square:
     def area(self):
         """ Returns the area of the square """
         return self.__size * self.__size
-
