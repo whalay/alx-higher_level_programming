@@ -2,13 +2,11 @@
 
 
 class Square:
-    '''Class Square object intialized with size
-    '''
+    ''' Class Square object intialized with size '''
     pass
 
     def __init__(self, size=0):
-        '''init method of class Square
-        '''
+        ''' init method of class Square '''
         if type(size) != int:
             raise TypeError("size must be an integer")
         if size < 0:
