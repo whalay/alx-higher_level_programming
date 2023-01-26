@@ -2,9 +2,8 @@
 
 
 class Square:
-    """
-    Class Square
-    """
+    """ Class Square """
+    
     def __init__(self, size=0):
         if type(size) is not int:
             raise TypeError("size must be an integer")
@@ -13,8 +12,6 @@ class Square:
         else:
             self.__size = size
 
-    """
-    Return area of Square object
-    """
+    """ Return area of Square object """
     def area(self):
         return (self.__size * self.__size)
