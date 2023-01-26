@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-
+""" This module defines a square class with a private size attribute """
 
 class Square:
     ''' Class Square object intialized with size '''
-    pass
+
 
     def __init__(self, size=0):
         ''' init method of class Square '''
