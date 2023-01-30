@@ -1,8 +1,11 @@
 #!/usr/bin/python3
 """
     This module contains a Rectangle class with
-    width and height attribute and also a property and
-    property setter
+    width and height instance attribute and also
+    a property and property setter
+    The rectangle class has a public class method
+    num_of_instances that increases when a new instance is
+    created and reduces when an instanceis deleted
     It also has 2 public instance methods to get the area
     and perimeter of the rectangle and can be printed
     using print.
@@ -12,14 +15,18 @@
 class Rectangle:
     """
         A rectangle class with width and height properties
-        and a perimeter and area methods
+        and a perimeter and area methods and a class method
     """
+
+    number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """ Initialize a new instance """
 
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     def __str__(self):
         """ function to return the string representation """
@@ -30,7 +37,7 @@ class Rectangle:
 
         for i in range(self.__height):
             for j in range(self.__width):
-                s += "#"
+                s += str(self.print_symbol)
             if i < self.__height - 1:
                 s += "\n"
 
@@ -50,6 +57,7 @@ class Rectangle:
         """ Calls when an instance is being deleted """
 
         print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
 
     @property
     def width(self):
