@@ -1,4 +1,4 @@
 #!/usr/bin/node
-myVar = 89;
-require('./100-let_me_const');
-console.log(myVar);
+// override variable in 100-main.js to change content
+myVar = 333;
+
