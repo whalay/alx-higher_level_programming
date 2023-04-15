@@ -12,7 +12,7 @@ if __name__ == "__main__":
                              database=argv[3])
     """create cursor to execute queries using SQL"""
     cursor = conn.cursor()
-    select_query = ("SELECT * FROM states ORDER BY is ASC")
+    select_query = ("SELECT * FROM states ORDER BY id ASC")
     cursor.execute(select_query)
     records = cursor.fetchall()
     for row in records:
